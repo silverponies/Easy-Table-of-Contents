@@ -4,7 +4,9 @@
 	border-radius: 4px;
 	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-	display: table;
+	display: block;
+	height: 300px;
+	overflow: hidden;
 	/*font-size: 95%;*/
 	margin-bottom: 1em;
 	padding: 10px;
@@ -170,10 +172,8 @@ div.ez-toc-widget-container li {
 #ez-toc-container.counter-hyphen li,
 .ez-toc-widget-container.counter-hyphen li {
 	list-style-type: '-';
-	list-style-position: inside;    
+	list-style-position: inside;
 }
-
-
 
 
 #ez-toc-container.counter-decimal ul.ez-toc-list li a::before,
@@ -384,7 +384,7 @@ div.ez-toc-widget-container li {
     border-radius: 5px;
     cursor: pointer;
 }
-div#ez-toc-container p.ez-toc-title { 
+div#ez-toc-container p.ez-toc-title {
     display: contents;
 }
 div#ez-toc-container {

@@ -125,7 +125,8 @@ jQuery( function( $ ) {
 
 		if ( typeof ezTOC.visibility_hide_by_default != 'undefined' ) {
 
-			var toc = $( 'ul.ez-toc-list' );
+			var container = $('#ez-toc-container');
+			//var toc = $( 'ul.ez-toc-list' );
 			var toggle = $( 'a.ez-toc-toggle' );
 			var invert = ezTOC.visibility_hide_by_default;
 
@@ -147,15 +148,15 @@ jQuery( function( $ ) {
 				toggle.data( 'visible', false )
 			}
 
-			if ( ! toggle.data( 'visible' ) ) {
+/* 			if ( ! toggle.data( 'visible' ) ) {
 
 				toc.hide();
-			}
+			} */
 
 			toggle.on( 'click', function( event ) {
 
 				event.preventDefault();
-				
+
 				const main = document.querySelector("#ez-toc-container");
 				if(main){
 					main.classList.toggle("toc_close");
@@ -163,7 +164,7 @@ jQuery( function( $ ) {
 				else
 				{
 					const side = document.querySelector(".ez-toc-widget-container");
-					side.classList.toggle("toc_close");					
+					side.classList.toggle("toc_close");
 				}
 
 				if ( $( this ).data( 'visible' ) ) {
@@ -178,7 +179,8 @@ jQuery( function( $ ) {
 							Cookies.set( 'ezTOC_hidetoc', '1', { expires: 30, path: '/' } );
 					}
 
-					toc.hide( 'fast' );
+					container.height(300);
+					//toc.hide( 'fast' );
 
 				} else {
 
@@ -192,7 +194,8 @@ jQuery( function( $ ) {
 							Cookies.set( 'ezTOC_hidetoc', null, { path: '/' } );
 					}
 
-					toc.show( 'fast' );
+					container.height('100%');
+					//toc.show( 'fast' );
 
 				}
 
