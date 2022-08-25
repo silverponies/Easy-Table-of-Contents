@@ -220,8 +220,6 @@ div.ez-toc-widget-container li {
 	vertical-align: middle;
 	cursor: pointer;
 	background-image: none;
-	border: 1px solid transparent;
-	border-radius: 4px;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -229,35 +227,9 @@ div.ez-toc-widget-container li {
 	user-select: none
 }
 
-.ez-toc-btn:focus {
-	outline: thin dotted #333;
-	outline: 5px auto -webkit-focus-ring-color;
-	outline-offset: -2px
-}
 
-.ez-toc-btn:hover,.ez-toc-btn:focus {
-	color: #333;
-	text-decoration: none
-}
 
-.ez-toc-btn:active,.ez-toc-btn.active {
-	background-image: none;
-	outline: 0;
-	-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
-	box-shadow: inset 0 3px 5px rgba(0,0,0,0.125)
-}
 
-.ez-toc-btn-default {
-	color: #333;
-	background-color: #fff;
-	border-color: #ccc
-}
-
-.ez-toc-btn-default:hover,.ez-toc-btn-default:focus,.ez-toc-btn-default:active,.ez-toc-btn-default.active {
-	color: #333;
-	background-color: #ebebeb;
-	border-color: #adadad
-}
 
 .ez-toc-btn-default:active,.ez-toc-btn-default.active {
 	background-image: none
@@ -281,43 +253,17 @@ div.ez-toc-widget-container li {
 	padding: 1px 5px
 }
 
-.ez-toc-btn-default {
-	text-shadow: 0 -1px 0 rgba(0,0,0,0.2);
-	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.15),0 1px 1px rgba(0,0,0,0.075);
-	box-shadow: inset 0 1px 0 rgba(255,255,255,0.15),0 1px 1px rgba(0,0,0,0.075)
-}
 
-.ez-toc-btn-default:active {
-	-webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
-	box-shadow: inset 0 3px 5px rgba(0,0,0,0.125)
-}
 
 .ez-toc-btn:active,.btn.active {
 	background-image: none
 }
 
 .ez-toc-btn-default {
-	text-shadow: 0 1px 0 #fff;
-	background-image: -webkit-gradient(linear,left 0,left 100%,from(#fff),to(#e0e0e0));
-	background-image: -webkit-linear-gradient(top,#fff 0,#e0e0e0 100%);
-	background-image: -moz-linear-gradient(top,#fff 0,#e0e0e0 100%);
-	background-image: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);
-	background-repeat: repeat-x;
-	border-color: #dbdbdb;
-	border-color: #ccc;
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffe0e0e0',GradientType=0);
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false)
 }
 
-.ez-toc-btn-default:hover,.ez-toc-btn-default:focus {
-	background-color: #e0e0e0;
-	background-position: 0 -15px
-}
-
-.ez-toc-btn-default:active,.ez-toc-btn-default.active {
-	background-color: #e0e0e0;
-	border-color: #dbdbdb
-}
 
 .ez-toc-pull-right {
 	float: right !important;
@@ -378,10 +324,7 @@ div.ez-toc-widget-container li {
     position: relative;
     left: 10px;
     font-size: 16px;
-    background: #f9efef;
     padding: 0px 4px 0px 5px;
-    border: 1px solid #999191;
-    border-radius: 5px;
     cursor: pointer;
 }
 div#ez-toc-container p.ez-toc-title {
