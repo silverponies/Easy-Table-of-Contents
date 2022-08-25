@@ -87,15 +87,21 @@ div.ez-toc-widget-container li {
 }
 
 .ez-toc-title-container {
-	display: table;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: 4em;
 	width: 100%;
 }
 
-.ez-toc-title,
 .ez-toc-title-toggle {
-	display: table-cell;
-	text-align: left;
-	vertical-align: middle;
+	height:16px;
+	width: 100%;
+	background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH0YPNvDPMgqcsDb48GCzTudWD3v_K0hP_Ok09gr7W&s);
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	padding: 3px;
 }
 
 #ez-toc-container.ez-toc-black p.ez-toc-title {
@@ -270,44 +276,17 @@ div.ez-toc-widget-container li {
 	margin-left: 10px;
 }
 
-.ez-toc-glyphicon {
-	position: relative;
-	top: 1px;
-	display: inline-block;
-	font-family: 'Glyphicons Halflings';
-	-webkit-font-smoothing: antialiased;
-	font-style: normal;
-	font-weight: normal;
-	line-height: 1;
-	-moz-osx-font-smoothing: grayscale
-}
-
-.ez-toc-glyphicon:empty {
-	width: 1em
-}
-
-.ez-toc-toggle i.ez-toc-glyphicon {
+.ez-toc-toggle {
 	font-size: 16px;
 	margin-left: 2px;
 }
 
-[class*="ez-toc-icon-"] {
-	font-family: 'ez-toc-icomoon' !important; /* For better glyphicon compatibility */
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+.ez-toc-toggle {
+	display: inline;
+	height: 16px;
+	width: 100%;
 }
 
-.ez-toc-icon-toggle:before {
-	content: "\e87a";
-}
 #ez-toc-container input {
   position: absolute;
   left: -999em;
@@ -334,7 +313,7 @@ div#ez-toc-container {
     padding-right: 20px;
 }
 
-label.cssicon .ez-toc-glyphicon:empty {
+label.cssicon {
     font-size: 16px;
     margin-left: 2px;
 }
