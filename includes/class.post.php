@@ -803,7 +803,7 @@ class ezTOC_Post {
 			// @link https://stackoverflow.com/a/21801444/5351316
 			$return = htmlentities2( $return );
 			$return = str_replace( array( '&amp;', '&nbsp;'), ' ', $return );
-			$return = str_replace( array( '&shy;' ),'', $return );					// removed silent hypen 
+			$return = str_replace( array( '&shy;' ),'', $return );					// removed silent hypen
 			$return = html_entity_decode( $return, ENT_QUOTES, get_option( 'blog_charset' ) );
 
 			// remove non alphanumeric chars
@@ -1187,8 +1187,8 @@ class ezTOC_Post {
 					break;
 				case 'center':
 					$class[] = 'ez-toc-wrap-center';
-					break;	
-					
+					break;
+
 				case 'none':
 				default:
 					// do nothing
@@ -1220,7 +1220,7 @@ class ezTOC_Post {
 				case 'hyphen':
 					$class[] = 'counter-hyphen';
 					break;
-					
+
 				case 'disc':
 					$class[] = 'counter-disc';
 					break;
@@ -1256,7 +1256,7 @@ class ezTOC_Post {
 			if($position == 'afterpara'){
 				$custom_classes .= "afterpara";
 			}
-			
+
 			if ( 0 < strlen( $custom_classes ) ) {
 
 				$custom_classes = explode( ' ', $custom_classes );
@@ -1295,15 +1295,16 @@ class ezTOC_Post {
 
 				if (ezTOC_Option::get( 'toc_loading' ) != 'css') {
 					$html .= '<span class="ez-toc-title-toggle">';
+					$html .= '<hr class="custom-delimiter-toggle" />';
 				}
-				
+
 				if ( ezTOC_Option::get( 'visibility' ) ) {
 					if (ezTOC_Option::get( 'toc_loading' ) != 'css') {
 						$icon = '<i class="ez-toc-glyphicon ez-toc-icon-toggle"></i>';
 						if(function_exists('ez_toc_pro_activation_link')){
 							$icon = apply_filters('ez_toc_modify_icon',$icon);
 						}
-						$html .= '<a href="#" class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle" style="display: none;"><label for="item" aria-label="'.__( 'Table of Content', 'easy-table-of-contents' ).'">'.$icon.'</label><input type="checkbox" id="item"></a>';
+						$html .= '<a href="#" class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle" style="display: none;"><div class="custom-dropdown-toggle"></div><label for="item" aria-label="'.__( 'Table of Content', 'easy-table-of-contents' ).'">'.$icon.'</label><input type="checkbox" id="item"></a>';
 					}else{
 						$toggle_view='';
 						if(ezTOC_Option::get('visibility_hide_by_default')==true){
@@ -1489,7 +1490,7 @@ class ezTOC_Post {
 		if (ezTOC_Option::get( 'remove_special_chars_from_title' )) {
 			$title = str_replace(':', '', $title);
 		}
-		
+
 		return sprintf(
 			'<a class="ez-toc-link ez-toc-heading-' . $count . '" href="%1$s" title="%2$s">%3$s</a>',
 			esc_attr( $this->createTOCItemURL( $id, $page ) ),

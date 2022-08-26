@@ -98,10 +98,13 @@ div.ez-toc-widget-container li {
 .ez-toc-title-toggle {
 	height:16px;
 	width: 100%;
-	background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH0YPNvDPMgqcsDb48GCzTudWD3v_K0hP_Ok09gr7W&s);
-	border: solid black;
-	border-width: 0 3px 3px 0;
 	padding: 3px;
+}
+
+.custom-delimiter-toggle {
+	position: relative;
+	height: 2px;
+	margin: 0;
 }
 
 #ez-toc-container.ez-toc-black p.ez-toc-title {
@@ -283,8 +286,24 @@ div.ez-toc-widget-container li {
 
 .ez-toc-toggle {
 	display: inline;
+	position: relative;
+	bottom: 73%;
 	height: 16px;
 	width: 100%;
+}
+
+.custom-dropdown-toggle {
+	display: inline-block;
+	position: absolute;
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	padding: 3px;
+	bottom: 30%;
+	height: 16px;
+	width: 16px;
+	background-color: white;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
 }
 
 #ez-toc-container input {
