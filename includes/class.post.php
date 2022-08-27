@@ -1291,7 +1291,7 @@ class ezTOC_Post {
 					$html .= '<div class="ez-toc-title-container">' . PHP_EOL;
 				}
 
-				$html .= '<p class="ez-toc-title">' . esc_html__( htmlentities( $toc_title, ENT_COMPAT, 'UTF-8' ), 'easy-table-of-contents' ). '</p>' . PHP_EOL;
+				$html .= '<div class="custom-toc-title"><p class="ez-toc-title">' . esc_html__( htmlentities( $toc_title, ENT_COMPAT, 'UTF-8' ), 'easy-table-of-contents' ). '</p></div><hr class="custom-delimiter-title" />' . PHP_EOL;
 
 				if (ezTOC_Option::get( 'toc_loading' ) != 'css') {
 					$html .= '<span class="ez-toc-title-toggle">';

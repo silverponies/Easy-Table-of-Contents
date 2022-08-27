@@ -328,7 +328,7 @@ if ( ! class_exists( 'ezTOC' ) ) {
 
 					if ( ezTOC_Option::get( 'theme' ) === 'custom' ) {
 
-						$css .= 'background: ' . ezTOC_Option::get( 'custom_background_colour' ) . ';border: 1px solid ' . ezTOC_Option::get( 'custom_border_colour' ) . ';';
+						$css .= 'background: ' . ezTOC_Option::get( 'custom_background_colour' ) . ezTOC_Option::get( 'custom_border_colour' ) . ';';
 					}
 
 					if ( 'auto' !== ezTOC_Option::get( 'width' ) ) {
@@ -497,7 +497,7 @@ if ( ! class_exists( 'ezTOC' ) ) {
     text-orientation: mixed;
 }
 @media screen  and (max-device-width: 640px) {
-        
+
     .ez-toc-sticky-fixed .ez-toc-sidebar {
         min-width: auto;
     }
@@ -523,7 +523,7 @@ INLINESTICKYTOGGLECSS;
 			$inlineStickyToggleJS = <<<'INLINESTICKYTOGGLEJS'
 /**
  * Sticky Sidebar JS
- */ 
+ */
 function hideBar(e) {
     e.preventDefault();
     var sidebar = document.querySelector(".ez-toc-sticky-fixed");
@@ -540,7 +540,7 @@ function showBar(e) {
 		var sidebar = document.querySelector(".ez-toc-sticky-fixed");
 		sidebar.classList.remove("hide");
 		sidebar.classList.add("show");
-    }, 200);  
+    }, 200);
 }
 (function() {
 	document.body.addEventListener("click", function (evt) {
@@ -898,7 +898,7 @@ INLINESTICKYTOGGLEJS;
 					$get_para = preg_match_all('%(<p[^>]*>.*?</p>)%i', $content, $matches);
   					$first_para = $matches[1][0];
 					$content = $first_para . $toc . $content;
-					break;	
+					break;
 				case 'before':
 				default:
 					//$replace[0] = $html . $replace[0];
@@ -982,19 +982,19 @@ STICKYTOGGLEHTML;
 		 * @static
 		 */
 		public static function addEditorButton() {
-			
+
             if ( !current_user_can( 'edit_posts' ) &&  !current_user_can( 'edit_pages' ) ) {
                        return;
                }
-			   
-		
+
+
            if ( 'true' == get_user_option( 'rich_editing' ) ) {
                add_filter( 'mce_external_plugins', array( __CLASS__, 'toc_add_tinymce_plugin'));
                add_filter( 'mce_buttons', array( __CLASS__, 'toc_register_mce_button' ));
                }
-			
+
 		}
-		
+
 		/**
 		 * Call back for the `mce_external_plugins` action.
 		 *
@@ -1003,14 +1003,14 @@ STICKYTOGGLEHTML;
 		 * @access private
 		 * @since  1.0
 		 * @static
-		 */		
-		
+		 */
+
 		public static function toc_register_mce_button( $buttons ) {
-            
+
 				array_push( $buttons, 'toc_mce_button' );
 				return $buttons;
 		}
-			
+
 		/**
 		 * Call back for the `mce_buttons` action.
 		 *
@@ -1021,7 +1021,7 @@ STICKYTOGGLEHTML;
 		 * @static
 		 */
 		public static function toc_add_tinymce_plugin( $plugin_array ) {
-			
+
 				$plugin_array['toc_mce_button'] = EZ_TOC_URL .'assets/js/toc-mce-button.js';
 				return $plugin_array;
 		}

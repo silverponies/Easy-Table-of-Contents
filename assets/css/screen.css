@@ -1,15 +1,13 @@
 #ez-toc-container {
-	background: #F9F9F9;
-	border: 1px solid #AAAAAA;
-	border-radius: 4px;
+	background: #FFF7F4;
 	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 	display: block;
-	height: 300px;
+	height: 258px;
 	overflow: hidden;
 	/*font-size: 95%;*/
 	margin-bottom: 1em;
-	padding: 10px;
+	padding: 0;
 	position: relative;
 	width: auto;
 }
@@ -59,6 +57,10 @@ div.ez-toc-widget-container ul.ez-toc-list {
 	padding: 0;
 }
 
+#ez-toc-container li:nth-child(4) {
+	padding-top: 50px;
+}
+
 #ez-toc-container ul,
 #ez-toc-container li,
 #ez-toc-container ul li,
@@ -88,17 +90,34 @@ div.ez-toc-widget-container li {
 
 .ez-toc-title-container {
 	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	height: 4em;
+	justify-content: center;
+	text-align: center;
 	width: 100%;
 }
 
+.custom-toc-title {
+	position: relative;
+	width: 30%;
+	background-color: #FFF7F4;
+	z-index: 1000;
+}
+
+.custom-delimiter-title {
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	margin: 0%;
+	top: 11.5%;
+	left: 0.1%;
+}
+
 .ez-toc-title-toggle {
+	position: absolute;
+	top: 88%;
+	left: 0;
 	height:16px;
 	width: 100%;
-	padding: 3px;
+	padding-top: 8px;
 }
 
 .custom-delimiter-toggle {
@@ -301,7 +320,7 @@ div.ez-toc-widget-container li {
 	bottom: 30%;
 	height: 16px;
 	width: 16px;
-	background-color: white;
+	background-color: #FFF7F4;
 	transform: rotate(45deg);
 	-webkit-transform: rotate(45deg);
 }
@@ -327,9 +346,6 @@ div.ez-toc-widget-container li {
 }
 div#ez-toc-container p.ez-toc-title {
     display: contents;
-}
-div#ez-toc-container {
-    padding-right: 20px;
 }
 
 label.cssicon {
