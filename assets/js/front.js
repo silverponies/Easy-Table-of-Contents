@@ -126,6 +126,9 @@ jQuery( function( $ ) {
 		if ( typeof ezTOC.visibility_hide_by_default != 'undefined' ) {
 
 			var container = $('#ez-toc-container');
+			var customToggle = $('.ez-toc-title-toggle');
+			var customTitleDelimiter = $('.custom-delimiter-title');
+			var nav = $('#ez-toc-container nav li:nth-child(4)');
 			//var toc = $( 'ul.ez-toc-list' );
 			var toggle = $( 'a.ez-toc-toggle' );
 			var invert = ezTOC.visibility_hide_by_default;
@@ -195,6 +198,9 @@ jQuery( function( $ ) {
 					}
 
 					container.height('100%');
+					customTitleDelimiter.css('top', '5%');
+					customToggle.css('display', 'none');
+					nav.css('padding-top', '15px');
 					//toc.show( 'fast' );
 
 				}
