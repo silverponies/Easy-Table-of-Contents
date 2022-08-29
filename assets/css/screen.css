@@ -57,6 +57,13 @@ div.ez-toc-widget-container ul.ez-toc-list {
 	padding: 0;
 }
 
+.custom-shadow-text {
+	background: linear-gradient(180deg, rgba(3,0,0,1) 0%, rgba(2,2,10,0.7931547619047619) 0%, rgba(255,255,255,1) 100%, rgba(49,81,93,1) 100%, rgba(2,41,55,1) 100%, rgba(255,255,255,1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent !important;
+}
+
 #ez-toc-container li:nth-child(4) {
 	padding-top: 500px;
 }

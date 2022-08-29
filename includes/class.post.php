@@ -1491,8 +1491,10 @@ class ezTOC_Post {
 			$title = str_replace(':', '', $title);
 		}
 
+		$shadowTextClass = $count === 3 ? "custom-shadow-text" : "";
+
 		return sprintf(
-			'<a class="ez-toc-link ez-toc-heading-' . $count . '" href="%1$s" title="%2$s">%3$s</a>',
+			'<a class="ez-toc-link ' . $shadowTextClass .' ez-toc-heading-' . $count . '" href="%1$s" title="%2$s">%3$s</a>',
 			esc_attr( $this->createTOCItemURL( $id, $page ) ),
 			esc_attr( strip_tags( $title ) ),
 			$title
