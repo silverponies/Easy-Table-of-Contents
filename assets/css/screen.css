@@ -161,7 +161,7 @@ div.ez-toc-widget-container li {
 #ez-toc-container a {
 	color: #444444;
 	box-shadow: none;
-	text-decoration: none;
+	text-decoration: none !important;
 	text-shadow: none;
 }
 
@@ -170,7 +170,7 @@ div.ez-toc-widget-container li {
 }
 
 #ez-toc-container a:hover {
-	text-decoration: underline;
+	text-decoration: none !important;
 }
 
 #ez-toc-container.ez-toc-black a {
