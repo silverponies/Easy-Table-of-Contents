@@ -198,7 +198,7 @@ jQuery( function( $ ) {
 							Cookies.set( 'ezTOC_hidetoc', null, { path: '/' } );
 					}
 
-					container.height('600px');
+					container.height('fit-content');
 					customTitleDelimiter.css('top', '5%');
 					customToggle.css('display', 'none');
 					nav.css('padding-top', '15px');
