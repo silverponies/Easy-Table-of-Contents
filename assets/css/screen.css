@@ -1,7 +1,5 @@
 #ez-toc-container {
 	background: #FFF7F4;
-	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 	display: block;
 	height: 287px;
 	overflow: hidden;
