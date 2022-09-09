@@ -203,6 +203,7 @@ jQuery( function( $ ) {
 					customToggle.css('display', 'none');
 					nav.css('padding-top', '15px');
 					tocHeading.removeClass('custom-shadow-text');
+					container.css('border-bottom', '2px solid rgba(0, 0, 0, 0.1)');
 					//toc.show( 'fast' );
 
 				}
