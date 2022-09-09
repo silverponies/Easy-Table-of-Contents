@@ -84,12 +84,21 @@ div.ez-toc-widget-container li {
 /*}*/
 
 #ez-toc-container p.ez-toc-title {
-	text-align: left;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	z-index: 1000;
+	background-color: #fff7f4;
+	width: 200px;
+	text-align: center;
 	/*font-family: "Arial Narrow", sans-serif;*/
 	/*font-size: 120%;*/
 	/*font-weight: 500;*/
 	line-height: 1.45;
-	margin: 0;
 	padding: 0;
 }
 
@@ -101,14 +110,16 @@ div.ez-toc-widget-container li {
 }
 
 .custom-toc-title {
-	position: relative;
-	width: 30%;
+	display: flex;
+	width: 100%;
+	align-items: center;
+	margin-bottom: 1em;
 	background-color: #FFF7F4;
-	z-index: 1000;
 }
 
 .custom-delimiter-title {
-	position: absolute;
+	position: relative;
+	z-index: 0;
 	height: 2px;
 	width: 100%;
 	margin: 0%;
@@ -325,6 +336,10 @@ div.ez-toc-widget-container li {
 	bottom: 30%;
 	height: 16px;
 	width: 16px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
 	background-color: #FFF7F4;
 	transform: rotate(45deg);
 	-webkit-transform: rotate(45deg);
@@ -350,7 +365,7 @@ div.ez-toc-widget-container li {
     cursor: pointer;
 }
 div#ez-toc-container p.ez-toc-title {
-    display: contents;
+    display: block;
 }
 
 label.cssicon {
@@ -375,13 +390,13 @@ div#ez-toc-container.afterpara + p {
 /* screen sizes 400px and below */
 @media screen and (max-width: 399px) {
 	#ez-toc-container {
-		height: 382px;
+		height: 332px;
 	}
 }
 
 /* screen sizes between 400px and 539px */
 @media screen and (min-width: 400px) and (max-width: 539px) {
 	#ez-toc-container {
-		height: 317px;
+		height: 251px;
 	}
 }
