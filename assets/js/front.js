@@ -136,6 +136,16 @@ jQuery( function( $ ) {
 
 			toggle.css( 'display', 'inline' );
 
+			// calculate height of the first three list elements
+			// set the container to this height initially
+			let tocBodyList = $('#ez-toc-container nav li').slice(0, 3);
+  		let initialHeight = 35;
+
+  		tocBodyList.each(function () {
+    		initialHeight += ($( this ).height() + 15);
+  		});
+  		container.height(initialHeight);
+
 			if ( Cookies ) {
 
 				Cookies.get( 'ezTOC_hidetoc' ) == 1 ? toggle.data( 'visible', false ) : toggle.data( 'visible', true );
